@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Мій Сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 20px;
+        }
+        .tab-content {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ласкаво просимо на мій сайт!</h1>
+</header>
+
+<nav>
+    <a href="javascript:void(0)" onclick="openTab('home')">Головна</a>
+    <a href="javascript:void(0)" onclick="openTab('about')">Про нас</a>
+    <a href="javascript:void(0)" onclick="openTab('services')">Послуги</a>
+    <a href="javascript:void(0)" onclick="openTab('contact')">Контакти</a>
+</nav>
+
+<div class="content">
+    <div id="home" class="tab-content active">
+        <h2>Головна сторінка</h2>
+        <p>Це домашня сторінка нашого сайту. Тут ви можете знайти основну інформацію про нас та наші послуги.</p>
+    </div>
+
+    <div id="about" class="tab-content">
+        <h2>Про нас</h2>
+        <p>Ми - компанія, яка надає різноманітні послуги в сфері веб-розробки. Наша мета - створення інноваційних та ефективних рішень для наших клієнтів.</p>
+    </div>
+
+    <div id="services" class="tab-content">
+        <h2>Наші послуги</h2>
+        <ul>
+            <li>Веб-розробка</li>
+            <li>Дизайн інтерфейсів</li>
+            <li>SEO-оптимізація</li>
+            <li>Маркетингові стратегії</li>
+        </ul>
+    </div>
+
+    <div id="contact" class="tab-content">
+        <h2>Контакти</h2>
+        <p>Ви можете зв'язатися з нами за електронною поштою: <a href="mailto:info@example.com">info@example.com</a></p>
+    </div>
+</div>
+
+<script>
+    function openTab(tabName) {
+        // Сховати всі вкладки
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        // Показати вкладку, яку вибрав користувач
+        const activeTab = document.getElementById(tabName);
+        activeTab.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
